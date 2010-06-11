@@ -1,0 +1,51 @@
+\section{Вопрос 1}
+
+Группа, подгруппа, гомоморфизм групп. Ядро и образ гомоморфизма. \newline
+
+\begin{defn}
+   \(<G, *, e>\) - группа, 
+   \(*: G \times G \rightarrow G, e \in G \) 
+   \begin{enumerate}       
+     \item \( \forall a, b, c \in G \; (ab)c=a(bc) \)
+     \item \( \forall g \in G \; eg = ge = g \)
+     \item \( \forall g \in G \; \exists g^{-1} \in G \; gg^{-1} = g^{-1}g = e \)
+   \end{enumerate}
+   Если \( \forall a, b \in G \; ab = ba \) то группу называют \emph{абелевой} 
+\end{defn}
+
+\begin{thm}
+  \( \exists ! e \in G \; eg = ge = g \)
+\end{thm}
+
+\begin{defn}
+  \( G \) - группа, тогда \( H \subset G \) называют \emph{подгруппой}, если 
+  \begin{enumerate}
+    \item \( e \in H \)
+    \item \( \forall h_1, h_2 \in H \; h_{1}h_{2} \in H \; | \; HH \subset H \)
+    \item \( \forall h \in H \; h^{-1} \in H \; | \; H^{-1} \subset H \)
+  \end{enumerate}
+\end{defn}
+
+\begin{defn}
+  \( G, W \) - группы. \newline
+  \( f: G \rightarrow W \) называют \emph{гомоморфизмом (групп)}, если \( \forall g_1, g_2 \in G \; f(g_{1}g_2) = f(g_1) * f(g_2) \)
+\end{defn}
+
+\begin{thm}
+  \( f: G \rightarrow W \) - гомоморфизм \newline
+  \( f(e_G) = e_W \)
+\end{thm}
+
+\begin{defn}
+    \( f: G \rightarrow W \) - гомоморфизм, тогда \newline
+    \( ker f = {g \in G | f(g) = e_W} \) - называют \emph{ядром гомоморфизма f}
+\end{defn}
+
+\begin{thm}
+  \( ker f \) - подгруппа \( G \)
+\end{thm}
+
+\begin{defn}
+   \( f: G \rightarrow W \) - гомоморфизм, тогда \newline
+   \( Im f = \{ w \in W : \exists g \in G \; f(g) = w \} \) - называют \emph{образом гомоморфизма f}
+\end{defn}
