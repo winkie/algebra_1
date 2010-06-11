@@ -1,0 +1,39 @@
+\section{Вопрос 5}
+
+Левые классы смежности по подгруппе (см. вопрос 2). Индекс подгруппы. Теорема об индексе.
+
+\begin{defn}
+  $ H \subset G $ \newline
+  $ [G:H] = \#G/H $ - индекс подгруппы. \newline
+  $ \#G $ - порядок, мощность группы. 
+\end{defn}
+
+Замечание: индекс тривиальной подгруппы - порядок группы.
+
+\begin{thm}[Теорема об индексе]
+  $ K \subset H \subset G $, \newline тогда $ [G:K] = [G:H][H:K] $
+\end{thm}
+\begin{proof}
+  $ G = \overset{[G:H]}{\underset{i=1}{\bigcup}} g_{i}H $ при этом $ g_{i}H \ne g_{j}H, i \ne j $. 
+  Аналогично $ H = \overset{[H:K]}{\underset{j=1}\bigcup} h_{j}K $ при этом $ h_{i}K \ne h_{j}K, i \ne j $. 
+  Запишем $ G = \underset{i, j}\bigcup \, g_{i}h_{j}K $. \newline
+  Теперь достаточно проверить, что $ g_{i}h_{j}K $ представляют все различные классы смежности по $ K $.
+  Пусть $ g_{i}h_{j}K = g_{l}h_{m}K $. Умножим на $ H $, получим $ g_{i}h_{j}KH = g_{l}h_{m}KH $, и далее
+  $ g_{i}h_{j}H = g_{l}h_{m}H \Rightarrow  g_{i}H = g_{l}H \Rightarrow i = l $. Вернемся к исходному равенству
+  $ g_{i}h_{j}K = g_{i}h_{m}K \Rightarrow h_{j}K = h_{m}K \Rightarrow j = m $. То есть все классы различны. \newline
+  Возьмем $ gK $. Ясно, что $ g = g_{i}h, h \in H $ и $ h = h_{m}k, k \in K $. Имеем 
+  $ g = g_{i}h_{m}k, g \in g_{i}h_{m}K $. Теперь понятно, что исходное представление $ G $ представляло все классы
+  смежности по $ K $.
+\end{proof}
+
+Следствия:
+
+\begin{enumerate}
+  \item Порядок подгруппы всегда делитель порядка группы. \newline
+    Пусть $ K = \{e\} $, по теореме об индексе $ \#G = \#(G/H)\#H $
+  \item $ \forall G : \#G = p, p \in \mathbb{P} $ - циклическая группа порядка p \newline
+    Рассмотрим $ G : \#G = p, p \in \mathbb{P} $. Рассмотрим $ H \subset G $ - циклическая подгруппа,
+    порожденная $ g \ne e $. Ясно, что $ \#H >= 2 $. Но $ \#H $ делитель $ \#G = p $, а значит
+    $ \#H = p = \# G $. Также из этого следует $ \forall G : \#G = p, p \in \mathbb{P} \;\;\;\; 
+    G \overset\sim{=} \mathbb{Z}/p\mathbb{Z} $
+\end{enumerate}

@@ -1,0 +1,32 @@
+\section{Вопрос 3}
+
+Характеризация мономорфизмов в терминах ядра. Основная теорема о гомоморфизме.
+
+\begin{thm}
+$ \phi $ - мономорфизм $ \Leftrightarrow ker \phi = \{e\} $
+\end{thm}
+\begin{proof}
+  $ [\Rightarrow] $ Пусть $ \exists g \ne e $ $ \phi(g) = e $. Но $ \phi(e) = e $. Таким образом $ g \ne e, \phi(g) = \phi(e) $. 
+  Противоречие инъективности. \newline
+  $ [\Leftarrow] $ Пусть $ \exists g_{1} \ne g_{2}, \phi(g_{1}) = \phi(g_{2}) $. Тогда $ \phi(g_{1})\phi(g_{2})^{-1} = e $,
+  а это значит, что $ g_{1}g_{2}^{-1} \ne e $ и $ g_{1}g_{2}^{-1} \in ker f $. Противоречие тривиальности ядра. 
+\end{proof}
+
+\begin{thm}
+  $ G/ker f \buildrel{\sim}\over{=} Im f $
+\end{thm}
+\begin{proof}
+  Пусть $ \phi : X \leftarrow Y $. Введем отношение эквивалентности: $ x_1 \sim x_2 $, если $ \phi(x_1) = \phi(x_2) $. 
+  Рассмотрим $ \tau : X/\!\!\!\sim  $ $ \rightarrow Im \, \phi, $ $ \tau(\overset\sim{x}) = \phi(x). $ \newline
+  $ \tau $ - инъекция. Действительно, если $ \overset\sim{x_1} \ne \overset\sim{x_2} $, то $ x_1 $ не эквивалентно $ x_2 $
+  и значит $ \phi(x_1) \ne \phi(x_2) $. \newline
+  $ \tau $ - сюръекция. Действительно $ \forall y \in Im \, \phi $ $ \exists x \; \phi(x) = y $ и 
+  $ \overset\sim{x} : \tau(\overset\sim{x}) = y $. Таким образом изоморфизм установлен. \newline
+  Теперь пусть $ f : G \rightarrow W $ - гомоморфизм. $ g_1 \sim g_2 $, если $ f(g_1) = f(g_2) $, или 
+  $ f(g_1)f(g_2)^{-1} = e, f(g_1g_2^{-1}) = e $ это означает, что $ g_1g_2^{-1} \in ker f $. То есть отношение $ \sim $
+  совпадает с отношением эквивалентности порождаемым $ ker f \triangleleft G $. Можно записать
+  $ G/ker f \buildrel{\sim}\over{=} Im f $.
+\end{proof}
+
+
+
