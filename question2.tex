@@ -1,0 +1,66 @@
+\section{Вопрос 2}
+
+Мономорфизмы, эпиморфизмы и изоморфизмы. Понятие нормального делителя (нормальной подгруппы). Факторгруппа.
+
+\begin{defn}
+  Сюръективный гомоморфизм - эпиморфизм. \newline
+  Инъективный гомоморфизм - мономорфизм. \newline
+  Биективный гомоморфизм - изоморфизм. \newline
+  Изоморфизм $ f: G \rightarrow G $ - автоморфизм. \newline
+\end{defn}
+
+Пусть $ H \subset G $. Введем отношение эквивалентности $ \sim $ соответствующее подгруппе. $ g_1, g_2 \in G $. $ g_1 \sim g_2 $, если $ g_{1}g_{2}^{-1} \in H $
+
+\begin{defn}
+  $  \overset{\sim}{g} = \{ k \in G | k \sim g\} $ - класс эквивалентности элемента $g$ 
+\end{defn}
+
+\begin{defn}
+  $ G/H $ - факторгруппа, левые смежные классы. $ \overset{\sim}{g} = Hg $
+\end{defn}
+
+Заметим, что в случае некоммутативной группы можно ввести правые смежные классы $ gH $.
+
+\begin{thm}
+  Если $ gH = Hg $, то $ G/H $ - группа.
+\end{thm}
+
+\begin{proof}  
+  Введем умножение: $ \forall g_{1}H, g_{2}H \in G/H \; (g_{1}H)(g_{2}H) = g_{1}g_{2}H $.
+  Проверим корректность умножения: пусть $ g_1' \sim g_1, g_2' \sim g_2 $. Тогда
+  $ g_1' = g_{1}h_1, g_2' = g_{2}h_2 $, а значит $ g_{1}'g_{2}'= g_{1}h_{1}g_{2}h_{2} = g_{1}g_{2}h_{1}h_{2} $. 
+  То есть $ g_{1}'g_{2}'H = g_{1}g_{2}H $. \newline
+  Теперь проверим свойства умножения: 
+  \begin{enumerate}
+    \item $ eHgH = gH $
+    \item $ g_{1}Hg_{2}Hg_{3}H = g_{1}g_{2}g_{3}H $
+    \item $ gHg^{-1}H = eH $
+  \end{enumerate}
+\end{proof}
+
+\begin{defn}
+  $H \subset G$ назовем нормальной подгруппой, если $ \forall g \in G \; gH = Hg $ или $ gHg^{-1} = H $ или $ ghg^{-1} \in H $  
+  \newline Обозначение: $H \triangleleft G$
+\end{defn}
+
+\begin{thm}
+  $ G $ - абелева группа, тогда $ \forall H \subset G $ - нормальная.
+\end{thm}
+
+\pagebreak
+
+\begin{thm}
+  Ядра гомоморфизмов и только они суть нормальные подгруппы.
+\end{thm}
+\begin{proof}
+  Сперва докажем, что если $ f: G \rightarrow W $ - гомоморфизм, то $ ker f \triangleleft G $. 
+  $ g \in G, h \in ker f $, тогда $ f(ghg^{-1}) = f(g)f(h)f(g^{-1}) = f(g)f(g)^{-1} = e_W $. \newline
+  Теперь покажем, что $ \forall H \triangleleft G \; \exists f $ - гомоморфизм и $ ker f = H $.
+  Введем $ \pi_{H} : G \rightarrow G/H $ - канонической гомоморфизм. Пусть $ g \in G, h \in H $ 
+  тогда $\pi_{H}(g) = gH, \pi_{H}(h) = hH = H $. Следовательно $ ker \pi_{H} = H $.
+\end{proof}
+
+
+
+
+
