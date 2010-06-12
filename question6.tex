@@ -17,16 +17,16 @@ $x \mapsto s(g, x)$ обозначим как $i_g$. Обратное дейст
 \end{enumerate}
 
 \begin{defn}
-Орбитой точки $x \in X$ назовем множество $G_x = \{ s(g, x) | g \in G \}$
+Орбитой точки $x \in X$ назовем множество $Gx = \{ s(g, x) | g \in G \}$
 \end{defn}
 
 \begin{lem}
 Множество орбит - разбиение множества $X$. Орбиты либо совпадают, либо не пересекаются.
 \end{lem}
 \begin{proof}
-Пусть $y \in G_{x_1} \bigcap G_{x_2}$. Это значит, что $ \exists g_1, g_2: y = g_1x_1 = g_2x_2$.
-Рассмотрим элемент $\widetilde{y} = gx_1$ из орбиты $G_{x_1}$. Но $\widetilde{y} = gg^{-1}_1y = gg^{-1}_1g_2x_2$. 
-Значит $\widetilde{y}$ из орбиты $G_{x_2}$. Следовательно орбиты совпадают.
+Пусть $y \in G{x_1} \bigcap G{x_2}$. Это значит, что $ \exists g_1, g_2: y = g_1x_1 = g_2x_2$.
+Рассмотрим элемент $\widetilde{y} = gx_1$ из орбиты $G{x_1}$. Но $\widetilde{y} = gg^{-1}_1y = gg^{-1}_1g_2x_2$. 
+Значит $\widetilde{y}$ из орбиты $G{x_2}$. Следовательно орбиты совпадают.
 \end{proof}
 
 \begin{defn}
@@ -46,19 +46,20 @@ $gwg^{-1} \in S_{x_1}$
 \end{center}
 \end{proof}
 
-Орбиты будем обозначать $O_x = G_x$.
+Орбиты будем обозначать $O_x = Gx$.
 
 \begin{thm}
-$|O_x| = \sharp(O_x) = [G : S_x], \forall x \in X$
+$|O_x| = \#(O_x) = [G : S_x], \forall x \in X$
 \end{thm}
 \begin{proof}
 $G \rightarrow O_x$, $x \mapsto gx$ (не в теме :|)\\
-Введем эквивалентность: $g_1 ~ g_2 {\buildrel{def}\over{\Leftrightarrow}} g_1x = g_2x
-\Leftrightarrow g^{-1}_1g_2x = x \Leftrightarrow g^{-1}_1g_2 \in S_x$.
+Введем эквивалентность: $g_1 \sim g_2 {\buildrel{def}\over{\Leftrightarrow}} g_1x = g_2x
+\Leftrightarrow g^{-1}_1g_2x = x \Leftrightarrow g^{-1}_1g_2 \in S_x$. Таким образом, 2 элемента эквивалентны, если они
+переводят элемент $x$ в один и тот же элемент орбиты. 2 элемента из разных классов эквивалентности переводят элемент $x$ в
+разные элементы орбиты. Разобьем всю группу на классы эквивалентности $G/S_x$. Отсюда $\#(O_x) = [G : S_x]$.
 \end{proof}
 
-\begin{thm}
-Формула орбит. \\
+\begin{thm}[Формула орбит]
 $X = {\underset{x \in Orb(X)}{\bigcup}}O_x$, ($x \in Orb(x)$ - берем по одному представителю со всех орбит) \\
 $|X| = {\underset{x \in Orb(X)}{\sum}}|O_x| = {\underset{x \in Orb(X)}{\sum}}[G : S_x]$
 \end{thm}
