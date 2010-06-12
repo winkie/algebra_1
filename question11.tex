@@ -1,0 +1,55 @@
+\section{Идеалы и факторкольца. Определение простого и максимального идеала.}
+
+\begin{defn}
+$A$ - кольцо; $\Id{a} \subset A$ \\
+$\Id{a}$ - идеал, если:
+\begin{enumerate}
+ \item $\Id{a}$ - абелева подгруппа\\ $\Id{a} + \Id{a}= \Id{a}, -\Id{a} = \Id{a}$
+ \item $A \cdot \Id{a} \subset \Id{a}; \forall c \in A, a \in \Id{a} \Rightarrow ca \in \Id{a}$
+\end{enumerate}
+
+\end{defn}
+
+Ядра гомоморфизмов (см. пред. вопрос) колец - идеалы.
+
+Введем отношение эквивалентности на $A$:
+\begin{center}
+$a_1 \sim a_2 ~ (a_1 \equiv a_2 \mod \Id{a})~{\buildrel{def}\over{\Leftrightarrow}}~a_1 - a_2 \in \Id{a}$
+\end{center}
+
+Будем обозначать: $\overline{a}$ - класс эквивалентности. $\overline{a} = a + \Id{a}$. $\overline{0} = \Id{a}$.
+
+Пусть $\Id{a}$ - идеал в $A$. Построим факторкольцо $A/\Id{a}$ следующим образом. Рассматривая $A$ и $\Id{a}$ как аддитивные группы,
+образуем факторгруппу $A/\Id{a}$. Определим теперь в $A/\Id{a}$ умножение: $\overline{a} \cdot \overline{b} = \overline{ab}$.
+Проверим, что такое умножение является правильным, т.е. $\overline{a_1} = \overline{a}~\&~\overline{b_1} = \overline{b}
+\Rightarrow \overline{a_1b_1} = \overline{ab}$.
+\begin{proof}
+Нужно показать, что если $a_1 \sim a$ и $b_1 \sim b$, то $a_1b_1 \sim ab$.
+\begin{gather}
+  a_1 = a + a_2, ~a_2 \in \Id{a} \notag \\ \notag
+  b_1 = b + b_2, ~b_2 \in \Id{a} \\ \notag
+  a_1b_1 = (a + a_2)(b + b_2) = ab + a_2b+b_2a+a_2b_2 \\ \notag
+  a_1b_1 - ab = a_2b+b_2a+a_2b_2 \in \Id{a} \\ \notag
+  a_1b_1 \sim ab \notag
+\end{gather}
+\end{proof}
+
+Таким образом, имеем факторкольцо $A/\Id{a}$.
+
+\begin{thm}
+$\phi: A \rightarrow A/\Id{a}$ \\
+$\phi(a) = \overline{a};~\phi(ab) = \phi(a)\phi(b)$ \\
+$\phi$ - канонический гомоморфизм колец. $Ker(\phi) = \Id{a}$
+\end{thm}
+
+\begin{thm}
+Ядра гомоморфизмов и только они являются идеалами.
+\end{thm}
+
+\begin{defn}
+Идеал $\Id{P} \subset A$ называется простым, если: $a_1a_2 \in \Id{P} \Rightarrow (a_1 \in \Id{P})\vee(a_2 \in \Id{P})$
+\end{defn}
+
+\begin{defn}
+Идеал $\Id{M} \subset A$ называется максимальным, если: $\Id{M} \neq A$ и если $\Id{B} \supset \Id{M}$ и $\Id{B}$ - идеал, то $\Id{B} = A$.
+\end{defn}
