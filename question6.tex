@@ -1,0 +1,66 @@
+\section{Действие группы на множестве. Орбиты. Разбиение множества на орбиты и формула орбит. Стабилизатор.}
+
+\begin{defn}
+Под действием группы $G$ на множестве $X$ понимается: $s: G \times X \rightarrow X$ со свойствами:
+\begin{enumerate}
+  \item $s(g_1, s(g_2, x)) = s(g_1 g_2, x)$
+  \item $s(e, x)) = x$
+\end{enumerate}
+\end{defn}
+
+\vspace{0.5cm}
+$x \mapsto s(g, x)$ обозначим как $i_g$. Обратное действие - $s^{-1}(g, x) = s(g^{-1}, x)$. \\
+\par Например, $s(g, x) = g \cdot x$ (Что-то я не понял. Дальше мы только это действие и используем..):
+\begin{enumerate}
+ \item $g_1(g_2x) = (g_1g_2)x$
+ \item $ex = x$
+\end{enumerate}
+
+\begin{defn}
+Орбитой точки $x \in X$ назовем множество $G_x = \{ s(g, x) | g \in G \}$
+\end{defn}
+
+\begin{lem}
+Множество орбит - разбиение множества $X$. Орбиты либо совпадают, либо не пересекаются.
+\end{lem}
+\begin{proof}
+Пусть $y \in G_{x_1} \bigcap G_{x_2}$. Это значит, что $ \exists g_1, g_2: y = g_1x_1 = g_2x_2$.
+Рассмотрим элемент $\widetilde{y} = gx_1$ из орбиты $G_{x_1}$. Но $\widetilde{y} = gg^{-1}_1y = gg^{-1}_1g_2x_2$. 
+Значит $\widetilde{y}$ из орбиты $G_{x_2}$. Следовательно орбиты совпадают.
+\end{proof}
+
+\begin{defn}
+Назовем стабилизатором точки $x \in X$ множество $S_x \in G: S_x = \{g \in G | gx = x \}$.
+\end{defn}
+
+\begin{lem}
+Стабилизаторы различных точек сопряжены в одной. $x$ и $x_1$ - точки одной орбиты,
+тогда $\exists g: S_x = gS_{x_1}g^{-1}$.
+\end{lem}
+\begin{proof}
+$x_1 = gx$ - т.к. они с одной орбиты. $x = g^{-1}x_1$. Рассмотрим $w \in S_x: wx = x$. 
+\begin{center}
+$wg^{-1}x_1 = g^{-1}x_1$\\
+$gwg^{-1}x_1 = x_1$\\
+$gwg^{-1} \in S_{x_1}$
+\end{center}
+\end{proof}
+
+Орбиты будем обозначать $O_x = G_x$.
+
+\begin{thm}
+$|O_x| = \sharp(O_x) = [G : S_x], \forall x \in X$
+\end{thm}
+\begin{proof}
+$G \rightarrow O_x$, $x \mapsto gx$ (не в теме :|)\\
+Введем эквивалентность: $g_1 ~ g_2 {\buildrel{def}\over{\Leftrightarrow}} g_1x = g_2x
+\Leftrightarrow g^{-1}_1g_2x = x \Leftrightarrow g^{-1}_1g_2 \in S_x$.
+\end{proof}
+
+\begin{thm}
+Формула орбит. \\
+$X = {\underset{x \in Orb(X)}{\bigcup}}O_x$, ($x \in Orb(x)$ - берем по одному представителю со всех орбит) \\
+$|X| = {\underset{x \in Orb(X)}{\sum}}|O_x| = {\underset{x \in Orb(X)}{\sum}}[G : S_x]$
+\end{thm}
+
+
