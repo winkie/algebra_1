@@ -19,9 +19,14 @@ $ h_{2}(g_{1},g_{2}) = g_{2}, \, ker \, h_{2} = \{ (g, e_{2}) \; | \; g \in G_{1
 $ (G_{1} \times G_{2})/G_{2} = G_{1}, (G_{1} \times G_{2})/G_{1} = G_{2} $
 
 \begin{thm}[Категорное свойство прямого произведения]
-  $ M = G_{1} \times G_{2} $, $ W $ - некоторая группа. \newline
+  $ W $ - некоторая группа. \newline
   $  \exists ! \phi $ - гомоморфизм, делающий диаграмму коммутативной. \newline
-  \includegraphics[scale = 0.3]{question9_1.pdf}
+  \[ \begin{diagram}
+     \node[2]{G_{1} \times G_{2}} \arrow{sw,t}{\pi_{1}} \arrow{se,t}{\pi_{2}} \\
+     \node{G_{1}} \node[2]{G_{2}} \\
+     \node[2]{W} \arrow{nw,b}{f_{1}} \arrow{ne,b}{f_{2}} \arrow[2]{n,r}{\phi}
+     \end{diagram}
+  \]
 \end{thm}
 
 \begin{thm}

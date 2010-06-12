@@ -13,7 +13,11 @@ $ w $ можно получить из $ v $ с помощью правил со
 \begin{thm}[Категорное свойство свободной группы]
   Существует единственный гомоморфизм, делающий диаграмму коммутативной. 
   То есть $ \forall f : S \rightarrow G \;\; \exists ! \phi_{f} : F_{S} \rightarrow G, \;\; f = \phi_{f} \circ i $. \newline
-  \includegraphics[scale=0.3]{question8_1}
+   \[ \begin{diagram}
+      \node{S} \arrow[2]{e,t}{i} \arrow[1]{se,b}{f}
+      \node[2]{F_{S}} \arrow{sw,b}{\phi_{f}} \\
+      \node[2]{G} 
+      \end{diagram} \]
 \end{thm}
 \begin{proof}
   Пусть $ S = \{ s_{1}, \cdots, s_{n} \} $. Тогда $ Im f = \{ f(s_{1}, \cdots, f(s_{n}) \} = \{ g_{1}, \cdots, g_{n} \} $. Теперь
@@ -28,7 +32,11 @@ $ w $ можно получить из $ v $ с помощью правил со
   Пусть существуют две свободные группы, порожденные $ S $ : $ F_{1} $ и $ F_{2} $. Тогда по свойству
   существуют единственные гомоморфизмы $ \phi_{i} : F_{1} \rightarrow F_{2} $ и $ \phi_{j} : F_{2} \rightarrow F_{1} $. А это значит, что
   $ F_{1} \overset\sim{=} F_{2} $. \newline
-  \includegraphics[scale = 0.3]{question8_2.pdf}
+  \[ \begin{diagram}
+    \node{S} \arrow[2]{e,t}{i} \arrow{se,b}{j}
+    \node[2]{F_{1}} \arrow{sw,b}{\phi_{i}} \\
+    \node[2]{F_{2}} \arrow{ne,t}{\phi_{j}}
+     \end{diagram} \]
 \end{proof}
 
 \pagebreak
