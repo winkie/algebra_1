@@ -1,0 +1,64 @@
+\section{Коммутативные кольца. Гомоморфизмы колец. Моно- и эпиморфизмы. Характеризация мономорфизмов.}
+
+\begin{defn}
+Кольцом ${A, +, \ast}$ называется множество с 2-мя бин. операциям: $+: A \times A \rightarrow A$ и
+$\ast: A \times A \rightarrow A$ и удовлетворяющее следующим условиям:
+\begin{enumerate}
+ \item $\{A, +\}$ - Абелева группа.
+ \begin{enumerate}
+  \item $a + b = b + a$
+  \item $(a + b) + c = a + (b + c)$
+  \item $\exists0: a + 0 = a$
+  \item $\forall a \exists -a: a + (-a) = 0$
+ \end{enumerate}
+
+ \item $(ab)c = a(bc)$ \\ $\exists e: ea = ae = a$
+ \item * $ab = ba$ (коммутативное кольцо)
+ \item $a(b+c) = ab + ac$
+\end{enumerate}
+\end{defn}
+
+Пример: $Z/nZ$ - коммутативное кольцо, $M_n(Z)$ - некоммутативное кольцо.
+
+\begin{defn}
+$A, B$ - кольца.\\
+$f: A \rightarrow B$ - гомоморфизм колец, если:
+\begin{enumerate}
+ \item $f(a \ast b) = f(a) \ast f(b)$
+ \item $f(a + b) = f(a) + f(b)$
+ \item $f(0_A) = 0_B$
+ \item $f(1_A) = 1_B$
+\end{enumerate}
+
+\begin{flushleft}
+Инъективный гомоморфизм - мономорфизм. \\
+Сюрьективный гомоморфизм - эпиморфизм. \\
+Биективный гомоморфизм - изоморфизм.
+\end{flushleft}
+\end{defn}
+
+Мы будем рассматривать коммутативные кольца!
+
+\begin{thm}
+WARNING! COPYPASTE!
+$ \phi $ - мономорфизм $ \Leftrightarrow ker \phi = \{e\} $
+\end{thm}
+\begin{proof}
+  $ [\Rightarrow] $ Пусть $ \exists g \ne e $ $ \phi(g) = e $. Но $ \phi(e) = e $. Таким образом $ g \ne e, \phi(g) = \phi(e) $. 
+  Противоречие инъективности. \newline
+  $ [\Leftarrow] $ Пусть $ \exists g_{1} \ne g_{2}, \phi(g_{1}) = \phi(g_{2}) $. Тогда $ \phi(g_{1})\phi(g_{2})^{-1} = e $,
+  а это значит, что $ g_{1}g_{2}^{-1} \ne e $ и $ g_{1}g_{2}^{-1} \in ker f $. Противоречие тривиальности ядра. 
+\end{proof}
+
+\begin{defn}
+$f$ - гомоморфизм колец.\\
+$Ker(f) = {a \in A| f(a) = 0_B}$ - ядро гомоморфизма.
+\end{defn}
+
+Свойства ядра:
+\begin{enumerate}
+ \item $a_1, a_2 \in Ker(f) \Rightarrow a_1 + a_2 \in Ker(f)$
+ \item $0_A \in Ker(f)$
+ \item $a \in Ker(f), b \in A \Rightarrow ba \in Ker(f)~\&~ab \in Ker(f)$
+\end{enumerate}
+

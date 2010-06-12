@@ -1,0 +1,56 @@
+\section{Идеалы и факторкольца. Определение простого и максимального идеала.}
+
+\begin{defn}
+$A$ - кольцо; $\ae \subset A$ \\
+$\ae$ - идеал, если:
+\begin{enumerate}
+ \item $\ae$ - абелева подгруппа\\ $\ae + \ae = \ae, -\ae = \ae$
+ \item $A \cdot \ae \subset \ae; \forall c \in A, a \in \ae \Rightarrow ca \in \ae$
+\end{enumerate}
+
+\end{defn}
+
+Ядра гомоморфизмов (см. пред. вопрос) колец - идеалы.
+
+Введем отношение эквивалентности на $A$:
+\begin{center}
+$a_1 \sim a_2 ~ (a_1 \equiv a_2 \mod \ae)~{\buildrel{def}\over{\Leftrightarrow}}~a_1 - a_2 \in \ae$
+\end{center}
+
+Будем обозначать: $\overline{a}$ - класс эквивалентности. $\overline{a} = a + \ae$. $\overline{0} = \ae$.
+
+Пусть $\ae$ - идеал в $A$. Построим факторкольцо $A/\ae$ следующим образом. Рассматривая $A$ и $\ae$ как аддитивные группы,
+образуем факторгруппу $A/\ae$. Определим теперь в $A/\ae$ умножение: $\overline{a} \cdot \overline{b} = \overline{ab}$.
+Проверим, что такое умножение является правильным, т.е. $\overline{a_1} = \overline{a}~\&~\overline{b_1} = \overline{b}
+\Rightarrow \overline{a_1b_1} = \overline{ab}$.
+\begin{proof}
+Нужно показать, что если $a_1 \sim a$ и $b_1 \sim b$, то $a_1b_1 \sim ab$.
+\begin{center}
+$a_1 = a + a_2, ~a_2 \in \ae$\\
+$b_1 = b + b_2, ~b_2 \in \ae$\\
+
+$a_1b_1 = (a + a_2)(b + b_2) = ab + a_2b+b_2a+a_2b_2$\\
+$a_1b_1 - ab = a_2b+b_2a+a_2b_2 \in \ae$\\
+$a_1b_1 \sim ab$ 
+\end{center}
+\end{proof}
+
+Таким образом, имеем факторкольцо $A/\ae$.
+
+\begin{thm}
+$\phi: A \rightarrow A/\ae$ \\
+$\phi(a) = \overline{a};~\phi(ab) = \phi(a)\phi(b)$ \\
+$\phi$ - канонический гомоморфизм колец. $Ker(\phi) = \ae$
+\end{thm}
+
+\begin{thm}
+Ядра гомоморфизмов и только они являются идеалами.
+\end{thm}
+
+\begin{defn}
+Идеал $\wp \subset A$ называется простым, если: $a_1a_2 \in \wp \Rightarrow (a_1 \in \wp)\vee(a_2 \in \wp)$
+\end{defn}
+
+\begin{defn}
+Идеал $M \subset A$ называется максимальным, если: $M \neq A$ и если $\beta \supset M$ и $\beta$ - идеал, то $\beta = A$.
+\end{defn}
