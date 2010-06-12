@@ -16,5 +16,45 @@
 Идеал $\Id{P}$ прост тогда и только тогда, когда $A/\Id{P}$ - область целостности
 \end{thm}
 \begin{proof}
-
+$[\Rightarrow]$ $\Id{P}$ прост.
+\[\overline{0} \neq \overline{x} \in A/\Id{P}\]
+\[\overline{0} \neq \overline{y} \in A/\Id{P}\]
+Покажем, что $\overline{x} \cdot \overline{y} \neq \overline{0}$.
+\[x \notin \Id{P}, y \notin \Id{P} \Rightarrow xy \notin \Id{P} \Leftrightarrow \overline{xy} \neq \overline{0}
+\Leftrightarrow \overline{x}\cdot\overline{y} \neq \overline{0}\]
+$[\Leftarrow]$ $A/\Id{P}$ - область целостности. Пусть $\Id{P}$ - не прост. Тогда $\exists a_1, a_2: a_1a_2 \in \Id{P}$,
+но $a_1 \notin \Id{P}~\&~a_2 \notin \Id{P}$. Рассмотрим соответствующие классы эквивалентности:
+\[\overline{a_1} \neq \overline{0}~\&~\overline{a_2} \neq \overline{0} \]
+\[\overline{a_1a_2} = \overline{a_1}\cdot\overline{a_2} = \overline{0}\]
+Но $A/\Id{P}$ - область целостности. Получили противоречие.
 \end{proof}
+
+ЗАМЕЧАНИЕ: $1 \in \Id{B} \Leftrightarrow \Id{B} = A$.
+
+\begin{defn}
+$S \subset A$, тогда $(S)$ - идеал, порожденный множеством $S$, т.е. пересечение всех идеалов, содержащих $S$.
+\end{defn}
+
+
+\begin{thm}
+$\Id{M}$ - максимальный $\Leftrightarrow$ $A/\Id{M}$ - поле
+\end{thm}
+\begin{proof}
+$[\Rightarrow]$ $\Id{M}$ - максимальный идеал. Покажем, что $A/\Id{M}$ - поле. Возьмем ненулевой элемент и найдем обратный
+к нему.
+\[\overline{x} \in A/\Id{M},~~~\overline{x} \neq \overline{0} \Leftrightarrow x \notin \Id{M}\]
+\[(\Id{M}\bigcup\{x\}) = A \Rightarrow 1 \in (\Id{M}\bigcup\{x\})\]
+\[(\Id{M}\bigcup\{x\}) = xA + \Id{M}\]
+\[\exists y \in A, ~ m_1 \in \Id{M}: 1 = xy + m_1 \Leftrightarrow \overline{1} = \overline{x}\cdot\overline{y} + \overline{0}
+ = \overline{xy}
+\]
+$[\Leftarrow]$ $A/\Id{M}$ - поле. Пусть $\Id{M}$ не максимальный. Тогда $\exists \Id{M_1}: \Id{M} \subset \Id{M_1}
+\subset A$. Возьмем $x \in \Id{M_1}\setminus\Id{M}$:
+\[(\Id{M}\bigcup\{x\}) \subset \Id{M_1} \Rightarrow 1 \notin (\Id{M}\bigcup\{x\})\]
+Рассмотрим $\overline{x} \in A/\Id{M}$. Т.к. $A/\Id{M}$ - поле, то $\exists \overline{y} \in A/\Id{M}:~
+\overline{x}\cdot\overline{y} = \overline{1}.$
+\[\exists m_1, m_2 \in \Id{M}: (x + m_1)(y + m_2) = 1 = xy + m_1y + m_2x + m_1m_2 = 1 \Rightarrow 1 \in
+(\Id{M}\bigcup\{x\})\]
+Получили противоречие.
+\end{proof}
+
