@@ -1,0 +1,73 @@
+\section{Общий вариант китайской теоремы об остатках. Применение ее к кольцу полиномов.}
+
+\begin{defn}
+Идеалы $\Id{a}, \Id{b}$ взаимнопросты, т.е. $(\Id{a}, \Id{b}) = 1$, если $\Id{a} + \Id{b} = A$
+\end{defn}
+
+\begin{thm}[Китайская теорема об остатках]
+Пусть $A$ - кольцо и $\Id{a}_1, \dots, \Id{a}_k$ - попарно взаимнопростые идеалы. Тогда
+\[\forall x_1, \dots, x_k, ~~~x_i \in A\]
+\[\exists x \in A: x \equiv x_i \mod \Id{a}_i, ~i = \overline{1, k}.\]
+Существует изоморфизм колец:
+\[\phi:~~~A\bigg/\underset{i = 1}{\overset{k}\bigcap \Id{a}_i} \rightarrow \underset{i = 1}{\overset{k}\prod} A/\Id{a}_i\]
+\end{thm}
+\begin{proof}
+Доказательство по ММИ.\\
+База: $k = 2$
+\[\Id{a}_1 + \Id{a}_2 = A \Rightarrow \exists y_1 \in \Id{a}_1, y_2 \in \Id{a}_2:~~~y_1 + y_2 = 1.\]
+Надо показать, что
+\[\exists x \in A: \begin{array}{l l}
+                   x & \equiv x_1 \mod \Id{a}_1 \\
+                   x & \equiv x_2 \mod \Id{a}_2 \\
+                   \end{array}
+\]
+Предъявим $x = x_2y_1 + x_1y_2$. Покажем, что это верно:
+\begin{gather}
+x - x_1 = x_2y_1 + x_1y_2 - x_1 = x_2y_1 + x_1(y_2 - 1) = x_2y_1 - x_1y_1 \in \Id{a}_1 \notag \\
+x - x_2 = x_2y_1 + x_1y_2 - x_2 = x_1y_2 + x_2(y_1 - 1) = x_1y_2 - x_2y_2 \in \Id{a}_2 \notag
+\end{gather}
+Переход:\\
+Покажем, что $\Id{a}_1$ взаимнопрост с $\underset{i = 2}{\overset{k}\prod}\Id{a}_i$. Т.к. $\Id{a}_1$ взаимнопрост с
+$\Id{a}_i,~i=\overline{2,k}$:
+\begin{gather}
+a_1 + b_1 = 1, ~~~a_1 \in \Id{a}_1, b_1 \in \Id{a}_2 \notag \\
+a_2 + b_2 = 1, ~~~a_2 \in \Id{a}_1, b_2 \in \Id{a}_3 \notag \\
+\dots \notag \\
+a_{k-1} + b_{k-1} = 1, ~~~a_{k-1} \in \Id{a}_1, b_{k-1} \in \Id{a}_k \notag
+\end{gather}
+Рассмотрим произведение:
+\[(a_1 + b_1)(a_2 + b_2)\cdots(a_{k-1} + b_{k-1}) = 1 \Leftrightarrow\] 
+\[(\dots)a + b_1b_2 \cdots b_{k-1} = 1,\]
+где $a \in \Id{a}_1$, а $b_1b_2 \cdots b_{k-1} \in \underset{i = 2}{\overset{k}\prod}\Id{a}_i$.
+Аналогично получаем, что $\Id{a}_l$ взаимнопрост с $\underset{i = 1, i \neq l}{\overset{k}\prod}\Id{a}_i$.\\
+Вернемся к доказательству теоремы. Пусть она верна для семейства из $k - 1$ идеалов.
+Рассмотрим $\Id{a}_1$ и $\Id{b} = \underset{i = 2}{\overset{k}\prod}\Id{a}_i$. По КТО:
+\[
+\exists y_1: \begin{array}{l l}
+              y_1 & \equiv 1 \mod \Id{a}_1 \\
+              y_1 & \equiv 0 \mod \Id{b} \\
+             \end{array}
+\]
+
+Аналогичным образом найдем $y_2, y_3, \dots, y_l$. Получаем:
+\[
+\left\{ 
+\begin{array}{l l}
+  y_i & \equiv 1 \mod \Id{a}_i \\
+  y_i & \in \Id{a}_j, ~i \neq j\\
+\end{array} \right.
+\]
+Предъявим $x = \underset{i = 1}{\overset{k}\sum}x_iy_i$. Действительно,
+\[x - x_i = \underset{l \neq i}\sum x_ly_l + (x_iy_i - x_i) \in \Id{a}_i,\]
+т.к. $\underset{l \neq i}\sum x_ly_l \in \Id{a_i}$ и $x_i(y_i - 1) \in \Id{a}_i$.
+\end{proof}
+
+Рассмотрим применение теоремы к кольцу полиномов.
+
+\begin{thm}
+$K[x]$ - кольцо полиномов над полем $K$.\\
+$f_1, \dots, f_k$ - полиномы такие, что $(f_i) + (f_j) = K[x] = (1), i \neq j$.
+Тогда для любого набора остатков $\forall r_1, \dots, r_k, ~r_i \in K[x]$:
+\[\exists f \in K[x]:~~~(f - r_i)~\vdots~f_i, ~i = \overline{1, k}.\]
+\end{thm}
+
