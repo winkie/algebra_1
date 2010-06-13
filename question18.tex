@@ -1,0 +1,87 @@
+\section{Расширения полей. Конечные и алгебраические расширения.
+Теорема: любое конечное расширение является алгебраическим.}
+
+Пусть $\mathbb{K}$ - поле.
+Будем полагать $\underbrace{x + x + x + \dots + x}_{n} = nx$
+
+Введем понятие характеристики поля:
+\[char(\mathbb{K}) = p = \underset{k}{\min}\{k \cdot e = 0\}.\]
+$p$ либо $\in \mathbb{N}$, либо $= 0$, если такого $k$ не существует.
+
+Пример: $Z/pZ = F_p$ - поле, т.к. идеал pZ максимальный. Характеристика $F_p$ равна $p$.
+
+\begin{defn}
+Конечное поле - поле, состоящее из конечного числа элементов.
+\end{defn}
+
+\begin{thm}[Свойство]
+Любое конечное поле имеет ненулевую характеристику.
+\end{thm}
+
+\begin{thm}[Свойство]
+Характеристика поля - простое число.
+\end{thm}
+\begin{proof}
+$] n = pq$ \\
+$n \cdot e = 0 \Rightarrow (p \cdot q) \cdot e = 0 \Rightarrow p(q \cdot e) = 0$ \\
+Но $n$ - $\min$ $\Rightarrow q \cdot e \neq 0, q \cdot e = x$.
+Итого, $p \cdot x = 0 \Rightarrow p \cdot x \cdot x^{-1} = 0 \Rightarrow p \cdot e = 0$!!!
+\end{proof}
+
+\begin{defn}
+Поле называется простым, если оно не содержит собственных подполей.
+\end{defn}
+
+$]~\mathbb{K}$ - поле, $char(\mathbb{K}) = p$, $p$ - простое.\\
+$k \subset \mathbb{K}$ - простое подполе. $k$ - замкнуто относительно сложения, умножение, взятия обратного.\\
+$k \cong F_p$
+
+\begin{defn}
+$k \subset \mathbb{K}$ - расширение полей.
+\end{defn}
+
+$K$ является векторным пространством над $k$
+
+\begin{defn} [Степень расширения]
+$[\mathbb{K}:k]$ - размерность $\mathbb{K}$ над $k$ как векторное пространство.
+\end{defn}
+
+Если $[\mathbb{K}:k] = n$, то $|\mathbb{K}| = |k|^n$, и если $k$ - простое подполе, то $|K| = p^n = q$.
+
+ЗАМЕЧАНИЕ: $Gal(\mathbb{K}:k)$ - группа Галуа - группа автоморфизмов $\mathbb{K}$, оставляющих $k$ на месте.
+\begin{thm}
+\[k \subset \mathbb{K} \subset \mathbb{W}\]
+Тогда $[\mathbb{W}:k] = [\mathbb{W}:\mathbb{K}] \cdot [\mathbb{K}:k]$
+\end{thm}
+\begin{proof}
+Будем обозначать: $\BB{W}_\BB{K}$ - про-во, соотв. вложению $\BB{K} \subset \BB{W}$. Аналагично, $\BB{K}_k$.\\
+$[\BB{W}:\BB{K}] = n \Rightarrow$ есть $n$ базисных векторов $E_1, \dots, E_n \in \BB{W}_\BB{K}$.\\
+Возьмем $w \in \BB{W}$: $w = \underset{i = 1}{\overset{n}\sum}\alpha_iE_i,~~~\alpha_i \in \BB{K}$.\\
+
+$[\BB{K}:k] = m \Rightarrow$ есть $m$ базисных векторов $e_1, \dots, e_m \in \BB{K}_k$.\\
+Каждый $\alpha_i = \underset{j = 1}{\overset{m}\sum}\beta_ije_j,~~~\beta_{ij} \in k$.\\
+Итого, $w = \underset{i = 1}{\overset{n}\sum}\underset{j = 1}{\overset{m}\sum}\beta_{ij} e_j E_i,~~~e_jE_i \in \BB{W}$.\\
+\end{proof}
+
+\begin{defn}
+$k \subset \BB{K}$\\
+$\alpha \in \BB{K}$ называется алгебраическим над $k$, если
+\[\exists c_0, c_1, \dots, c_n \in k:~~~\underset{i = 0}{\overset{n}\sum}c_i\alpha^i = 0\]
+\end{defn}
+
+\begin{defn}
+Расширение $k \subset \BB{K}$ называется алгебраическим над $k$, если $\forall \alpha \in \BB{K}$ - алгебраическое над $k$.
+\end{defn}
+
+\begin{thm}
+Любое конечное расширение - алгебраическое.\\
+$[\BB{K}:k] < \infty \Rightarrow k \subset \BB{K}$ - алгебраическое.
+\end{thm}
+\begin{proof}
+Пусть $[\BB{K}:k] = n$. Возьмем $\forall \alpha \in \BB{K}$.
+Заметим, что вектора $1 = \alpha^0, \alpha^1, \dots, \alpha^n$ линейно зависимы (их $n + 1$). Значит,
+$\underset{i = 0}{\overset{n}\sum}c_i\alpha^i = 0$.
+\end{proof}
+
+
+
