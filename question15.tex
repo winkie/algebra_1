@@ -1,0 +1,82 @@
+\section{Модули и их гомоморфизмы. Моно, эпи и изоморфизмы модулей. Примеры.}
+
+\begin{defn}
+  $ M $ называется модулем над кольцом $ A $ или $A$-модулем.
+  \begin{enumerate}
+    \item $ \{M, 0, +\} $ - абелева группа
+    \item $ b(am) = (ba)m, ~ 0m = 0 $
+    \item $ a(m_1 + m_2) = am_1 + am_2 $
+  \end{enumerate}
+\end{defn}
+
+ЗАМЕЧАНИЕ: $ + : M \rightarrow M $, но $ \ast : A \times M \rightarrow M $
+
+\begin{defn}
+  $ \phi : M_{1} \rightarrow M_{2} ;~  M_1, M_2 - A-$модули \newline
+  Будем называть $ \phi $ \emph{гомоморфизмом модулей}, если:
+  \begin{enumerate}
+    \item $ \phi(m_1+m_2) = \phi(m_1) + \phi(m_2) $
+    \item $ \phi(0) = 0 $
+    \item $ \phi(am) = a\phi(m), \forall a \in A, m \in M $
+  \end{enumerate}
+\end{defn}
+
+\begin{defn}
+  $ \phi : M_1 \rightarrow M_2 $ - гомоморфизм модулей. \\
+  $ ker \, \phi = \{ m \in M_1 ~ | ~ \phi(m) = 0 \} $ - \emph{ядро} гомоморфизма\\
+  $ Im \, \phi = \{ m \in M_2 ~ | ~ \exists m_1 \in M_1 ~ \phi(m_1) = m \} $ - \emph{образ} гомоморфизма
+\end{defn}
+
+\begin{defn}
+  \emph{Подмодулем} $ B $ $A$-модуля $ M $ будем называть подгруппу группы $ M $, замкнутую
+  относительно умножения на элементы из $ A $, т.е. такую, что 
+  \[ \forall b \in B, a \in A ~ : ~ ab \in B \]
+\end{defn}
+
+Введем отношение эквивалентности, порождаемое подмодулем $ M_1 $ в модуле $ M_2 $. 
+\[ \forall s_1, s_2 \in M_2 ~ s_1 \sim s_2 \Leftrightarrow s_1 - s_2 \in M_1 \]
+Множество классов эквивалентности по такому отношению будем обозначать $ M_2/M_1 $.
+А класс эквивалентности элемента $ m \in M_2 $ будем обозначать $ \overline{m} $.
+Заметим, что $ \overline{m} = m + M_1 $.
+
+\begin{thm}
+  $ M_2/M_1 $ - модуль. 
+\end{thm}
+
+\begin{proof}
+  \begin{enumerate}
+    \item Положим $ \overline{m_1} + \overline{m_2} = \overline{m_1 + m_2} $, $ a\overline{m} = \overline{am} $.
+    \item Проверим корректность введенных операций, пусть 
+      \[ m_1' \sim m_1, m_2' \sim m_2 \]
+      \[ m_1' \in m_1 + M_1, m_2' \in m_2 + M_1 \]
+      \[ m_1' + m_2' \in m_1 + m_2 + M_1 \]
+      \[ \overline{m_1' + m_2'} = \overline{m_1 + m_2} \]
+      Пусть теперь 
+      \[ m_1 \sim m \]
+      \[ m_1 \in m + M_1, am_1 \in am + M_1 \]
+      \[ \overline{am_1} = \overline{am} \]
+  \end{enumerate}
+\end{proof}
+
+\begin{thm}
+  $ \exists \phi : M_2 \rightarrow M_2/M_1, $ $ ker \, \phi = M_1 $ - естественный эпиморфизм.
+\end{thm}
+
+\begin{proof}
+  Пусть $ \phi(m) = \overline{m} $. $\phi $ - эпиморфизм модулей. Пусть $ m \in M_1 $, тогда
+  $ \phi(m) = \overline{m} = m + M_1 = M_1 $, а значит $ ker \, \phi = M_1 $
+\end{proof}
+
+\begin{thm}
+  $ \phi : M_1 \rightarrow M_2 $ - гомоморфизм модулей. Тогда $ M_1/ker \, \phi = Im \, \phi $
+\end{thm}
+
+Примеры:
+\begin{enumerate}
+  \item Любое векторное пространство - модуль.
+  \item $ A $ - кольцо $ \Rightarrow A $ - модуль.
+  \item $ \Id{a} \subset A $ - идеал. $ \Rightarrow \Id{a} $ - $A$-модуль. 
+  \item $ A / \Id{a} $ - $A$-модуль.
+  \item Любая абелева группа это $ \mathbb{Z}$-модуль.
+  \item Кольцо многочленов над кольцом - модуль. Кольцо много членов над полем - векторное пространство.
+\end{enumerate}
