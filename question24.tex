@@ -1,6 +1,6 @@
 \section{Теорема Берлекэмпа}
 
-Вообще, идея Берлекэмпа состоит в применении КТО.Если $(c_1, c_2, ..., c_m)$ является произвольным набором чисел из $F_p$, то из КТО вытекает, что $\exists!~g(x) \in k[x]$
+Вообще, идея Берлекэмпа состоит в применении КТО. Если $(c_1, c_2, ..., c_m)$ является произвольным набором чисел из $F_p$, то из КТО вытекает, что $\exists!~g(x) \in k[x]$
 такой, что 
 \[
 \begin{array}{l}
@@ -20,9 +20,8 @@ $F_p \subset k, char(k) = p$ \\
 $\forall x \in k~~~x \in F_p \Leftrightarrow x^p = x $
 \end{lem}
 \begin{proof}
-$|F_p| = p$. Многочлен степени $p$ имеет $p$ корней. \\
-Мы предъявили все корни. \\
-(Так написано в тетради. Надо подумать)
+  $ [\Rightarrow] $ Непосредственно следует из малой теоремы Ферма. \newline
+  $ [\Leftarrow] $ Было доказано, что все корни многочлена $ x^p - x = 0 $ составляют все конечное поле $ \galf $.
 \end{proof}
 
 \begin{thm} [Берлекэмпа]
@@ -47,24 +46,24 @@ g^p \equiv c_1^p \equiv [\text{малая т. Ферма}] \equiv c_1 \equiv g \
 Таким образом, 
 \[
 \begin{array}{l}
-g^p - g \vdots f_1 \\
-g^p - g \vdots f_2 \\
-g^p - g \vdots f_3 \\
+g^p - g ~ \vdots ~ f_1 \\
+g^p - g ~ \vdots ~ f_2 \\
+g^p - g ~ \vdots ~ f_3 \\
 \vdots \\
-g^p - g \vdots f_m \\
+g^p - g ~ \vdots ~ f_m \\
 \end{array}
-\Leftrightarrow g^p - g \vdots f
+\Leftrightarrow g^p - g ~ \vdots ~ f
 \]
 $[\Rightarrow]$
 \[
 \begin{array}{l}
-g^p - g \vdots f \Rightarrow g^p - g \vdots f_i \Rightarrow g^p - g \equiv 0 \mod f_i \Rightarrow \\
+g^p - g ~ \vdots f \Rightarrow g^p - g ~ \vdots ~ f_i \Rightarrow g^p - g \equiv 0 \mod f_i \Rightarrow \\
 g^p \equiv g \mod f_i \buildrel{\text{по лемме}}\over{\Rightarrow} g \equiv c_i \mod f_i,~~~c_i \in F_p
 \end{array}
 \]
 \end{proof}
 
-Пусть теперь мы нашли $g$, такой, что $g^p \equiv g \mod f$. По теореме, $\exists c \in F_p:~g - c \vdots f_1$.
+Пусть теперь мы нашли $g$, такой, что $g^p \equiv g \mod f$. По теореме, $\exists c \in F_p:~g - c ~ \vdots ~ f_1$.
 Ищем
 \begin{align}
 \text{НОД}(g - 0&, f) \notag \\
