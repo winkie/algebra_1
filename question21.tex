@@ -13,6 +13,7 @@ $f$ имеет корень.
 Возьмем моном $x \in k[x]$ и рассмотрим элемент $\overline{x} \in K$.
 Покажем, что $g$ переводит класс $\overline{x}$ в $\overline{0}$, т.е. является корнем $g$.
 \[\overline{x} = x + \phi \cdot g,~\text{где}~~\phi \in k[x]\]
+Пусть $g(x) = \underset{i = 0}{\overset{n}\sum}a_ix^i$. Тогда
 \[g(\overline{x}) = \underset{i = 0}{\overset{n}\sum}a_i(\phi g + x)^i = [\text{раскрыв скобки по биному}] = (...)g + \underset{i = 0}{\overset{n}\sum}a_i x^i\]
 Таким образом, $g(\overline{x}) \equiv 0 \mod g(x)$, т.е. $g(\overline{x}) = \overline{0}$
 \end{proof}
@@ -33,7 +34,7 @@ $k$ - поле. $f$ - произвольный полином из $k[x]$.
 Построим поле $\BB{K}_1:~~~k \subset \BB{K}_1 = k[x] / (g_1)$.\\
 В поле $\BB{K}_1$  $f = (x - \alpha_1) \cdot f_1$, где $\alpha_1$ - корень $g_1$. \\
 Аналогично строим $\BB{K}_2, \BB{K}_3, \dots, \BB{K}_n$.
-\[f(x) = (x - \alpha_1)(x - \alpha_2) \cdots (x - \alpha_n)\]
+\[f(x) = (x - \alpha_1)(x - \alpha_2) \cdots (x - \alpha_n)~~~\text{в $\BB{K}_n$}\]
 Поле, порожденное всеми корнями $f$: $\BB{K}_f = k(\alpha_1, \alpha_2, \dots, \alpha_n) \subset \BB{K}_n$
 \end{proof}
 
