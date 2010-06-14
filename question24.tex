@@ -55,13 +55,25 @@ g^p - g ~ \vdots ~ f_m \\
 \end{array}
 \Leftrightarrow g^p - g ~ \vdots ~ f
 \]
-$[\Rightarrow]$
+$[\Rightarrow]$ (Непонятно: правда или нет)
 \[
 \begin{array}{l}
 g^p - g ~ \vdots f \Rightarrow g^p - g ~ \vdots ~ f_i \Rightarrow g^p - g \equiv 0 \mod f_i \Rightarrow \\
 g^p \equiv g \mod f_i \buildrel{\text{по лемме}}\over{\Rightarrow} g \equiv c_i \mod f_i,~~~c_i \in F_p
 \end{array}
-\]
+\] \\
+$[\Rightarrow]$ (Альтернативное док-во от Ромы)
+По КТО существует изоморфизм:
+\[\phi:~~~k[x] / (f) \rightarrow \underset{i = 1}{\overset{m}\prod} k[x]/(f_i)\]
+$\phi$ таков, что переводит $g$ в $(r_1, r_2, \dots, r_m)$. Итак, 
+\begin{align}
+g^p &\equiv g \mod f \Leftrightarrow g^p \equiv g \mod f_i \notag \\
+g &\equiv r_i \mod f_i \notag \\
+g^p &\equiv r_i^p \mod f_i \notag \\
+\Rightarrow r_i^p &\equiv r_i \mod f_i \buildrel{\text{по лемме}}\over{\Rightarrow} r_i \in F_p \notag
+\end{align}
+
+
 \end{proof}
 
 Пусть теперь мы нашли $g$, такой, что $g^p \equiv g \mod f$. По теореме, $\exists c \in F_p:~g - c ~ \vdots ~ f_1$.
