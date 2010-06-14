@@ -40,14 +40,13 @@ $f: A \rightarrow B$ - гомоморфизм колец, если:
 Мы будем рассматривать коммутативные кольца!
 
 \begin{thm}
-WARNING! COPYPASTE!
-$ \phi $ - мономорфизм $ \Leftrightarrow ker \phi = \{e\} $
+$ \phi $ - мономорфизм $ \Leftrightarrow ker \phi = \{0\} $
 \end{thm}
 \begin{proof}
-  $ [\Rightarrow] $ Пусть $ \exists g \ne e $ $ \phi(g) = e $. Но $ \phi(e) = e $. Таким образом $ g \ne e, \phi(g) = \phi(e) $. 
+  $ [\Rightarrow] $ Пусть $ \exists a \ne 0 $ $ \phi(a) = 0 $. Но $ \phi(0) = 0 $. Таким образом $ a \ne 0, \phi(a) = \phi(0) $. 
   Противоречие инъективности. \newline
-  $ [\Leftarrow] $ Пусть $ \exists g_{1} \ne g_{2}, \phi(g_{1}) = \phi(g_{2}) $. Тогда $ \phi(g_{1})\phi(g_{2})^{-1} = e $,
-  а это значит, что $ g_{1}g_{2}^{-1} \ne e $ и $ g_{1}g_{2}^{-1} \in ker f $. Противоречие тривиальности ядра. 
+  $ [\Leftarrow] $ Пусть $ \exists a \ne b, \phi(a) = \phi(b) $. Тогда $ \phi(a) - \phi(b) = 0 $,
+  а это значит, что $ a - b \ne 0 $ и $ a - b \in ker \phi $. Противоречие тривиальности ядра. 
 \end{proof}
 
 \begin{defn}

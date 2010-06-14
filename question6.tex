@@ -10,7 +10,7 @@
 
 \vspace{0.5cm}
 $x \mapsto s(g, x)$ обозначим как $i_g$. Обратное действие - $s^{-1}(g, x) = s(g^{-1}, x)$. \\
-\par Например, $s(g, x) = g \cdot x$ (Что-то я не понял. Дальше мы только это действие и используем..):
+\par Обозначим $s(g, x) = g \cdot x, т.е.:$
 \begin{enumerate}
  \item $g_1(g_2x) = (g_1g_2)x$
  \item $ex = x$
@@ -30,7 +30,7 @@ $x \mapsto s(g, x)$ обозначим как $i_g$. Обратное дейст
 \end{proof}
 
 \begin{defn}
-Назовем стабилизатором точки $x \in X$ множество $S_x \in G: S_x = \{g \in G | gx = x \}$.
+Назовем стабилизатором точки $x \in X$ множество $S_x \subset G: S_x = \{g \in G | gx = x \}$.
 \end{defn}
 
 \begin{lem}
@@ -52,7 +52,6 @@ $gwg^{-1} \in S_{x_1}$
 $|O_x| = \#(O_x) = [G : S_x], \forall x \in X$
 \end{thm}
 \begin{proof}
-$G \rightarrow O_x$, $x \mapsto gx$ (не в теме :|)\\
 Введем эквивалентность: $g_1 \sim g_2 {\buildrel{def}\over{\Leftrightarrow}} g_1x = g_2x
 \Leftrightarrow g^{-1}_1g_2x = x \Leftrightarrow g^{-1}_1g_2 \in S_x$. Таким образом, 2 элемента эквивалентны, если они
 переводят элемент $x$ в один и тот же элемент орбиты. 2 элемента из разных классов эквивалентности переводят элемент $x$ в
