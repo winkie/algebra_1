@@ -9,7 +9,7 @@
 \[\forall x_1, \dots, x_k, ~~~x_i \in A\]
 \[\exists x \in A: x \equiv x_i \mod \Id{a}_i, ~i = \overline{1, k}.\]
 Существует изоморфизм колец:
-\[\phi:~~~A\bigg/\underset{i = 1}{\overset{k}\bigcap \Id{a}_i} \rightarrow \underset{i = 1}{\overset{k}\prod} A/\Id{a}_i\]
+\[\phi:~~~A\bigg/\underset{i = 1}{\overset{k}\bigcap} \Id{a}_i \rightarrow \underset{i = 1}{\overset{k}\prod} A/\Id{a}_i\]
 \end{thm}
 \begin{proof}
 Доказательство по ММИ.\\
@@ -60,6 +60,11 @@ a_{k-1} + b_{k-1} = 1, ~~~a_{k-1} \in \Id{a}_1, b_{k-1} \in \Id{a}_k \notag
 Предъявим $x = \underset{i = 1}{\overset{k}\sum}x_iy_i$. Действительно,
 \[x - x_i = \underset{l \neq i}\sum x_ly_l + (x_iy_i - x_i) \in \Id{a}_i,\]
 т.к. $\underset{l \neq i}\sum x_ly_l \in \Id{a_i}$ и $x_i(y_i - 1) \in \Id{a}_i$.
+
+Таким образом имеем сюръективное отображение $f: A \rightarrow \underset{i = 1}{\overset{k}\prod} A/\Id{a}_i$. \\
+Заметим, что ядро данного гомоморфизма есть $\underset{i = 1}{\overset{k}\bigcap}\Id{a}_i$. По теореме о гомоморфизме
+имеем изоморфизм:
+\[A\bigg/\underset{i = 1}{\overset{k}\bigcap \Id{a}_i} \cong \underset{i = 1}{\overset{k}\prod} A/\Id{a}_i\]
 \end{proof}
 
 Рассмотрим применение теоремы к кольцу полиномов.

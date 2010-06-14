@@ -25,7 +25,8 @@ $\forall x \in k~~~x \in F_p \Leftrightarrow x^p = x $
 все $p$ корней из $F_p$, и других быть не может.
 \end{proof}
 
-\begin{thm} [Берлекэмпа]
+\begin{thm} [Берлекэмпа] 
+$f = f_1 \cdots f_m, f_i \in k[x], char(k) = p, k$ - конечное поле. Тогда:
 \[
 \begin{array}{l}
 ~~~~~g^p - g~\vdots~f \\
@@ -55,13 +56,7 @@ g^p - g ~ \vdots ~ f_m \\
 \end{array}
 \Leftrightarrow g^p - g ~ \vdots ~ f
 \]
-$[\Rightarrow]$ (Непонятно: правда или нет)
-\[
-\begin{array}{l}
-g^p - g ~ \vdots f \Rightarrow g^p - g ~ \vdots ~ f_i \Rightarrow g^p - g \equiv 0 \mod f_i \Rightarrow \\
-g^p \equiv g \mod f_i \buildrel{\text{по лемме}}\over{\Rightarrow} g \equiv c_i \mod f_i,~~~c_i \in F_p
-\end{array}
-\] \\
+
 $[\Rightarrow]$ (Альтернативное док-во от Ромы)
 По КТО существует изоморфизм:
 \[\phi:~~~k[x] / (f) \rightarrow \underset{i = 1}{\overset{m}\prod} k[x]/(f_i)\]
